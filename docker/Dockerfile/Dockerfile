@@ -1,6 +1,6 @@
-FROM ubuntu:latest
+FROM ubuntu:vim
 
-RUN apt-get update
-# Adding "-y" can avoid inputting y. when install vim
+# container will create a folder named /share/data1.
+# user can use "docker run -v mydata:/share/data1 xxx" to map mydata to /share/data1
 
-RUN apt-get install -y vim
+VOLUME /share/data1
