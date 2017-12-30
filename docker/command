@@ -1,0 +1,8 @@
+# exist an image named hello-docker. build an image named hello-docker again.
+# the previous image will become none. use the following command to list the none image
+# finally, user docker rmi id to delete or docker rmi $(docker images -f "dangline=true" -q);
+
+docker images -f "dangling=true" -q
+
+# for busybox image, should use "/bin/sh", for ubuntu, should use "/bin/bash"
+docker exec -it busybox /bin/sh
