@@ -1,0 +1,17 @@
+#this link is the about how to use docker-compose
+#http://blog.csdn.net/yl_1314/article/details/53761049
+#
+version: '2'
+services:
+  web:
+    image: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - /Users/xingkd/program/balance/nginx1:/usr/share/nginx/html
+  web1:
+    image: nginx
+    ports:
+      - "8081:80"
+    volumes:
+      - /Users/xingkd/program/balance/nginx2:/usr/share/nginx/html
