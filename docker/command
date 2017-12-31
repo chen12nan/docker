@@ -6,3 +6,7 @@ docker images -f "dangling=true" -q
 
 # for busybox image, should use "/bin/sh", for ubuntu, should use "/bin/bash"
 docker exec -it busybox /bin/sh
+
+# The container will exit if stop the nginx by "service nginx stop".
+# If doesn't want to exit the container, better to attach the container, and restart the nginx by "service nginx reload"
+service nginx reload 
